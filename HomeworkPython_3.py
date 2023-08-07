@@ -1,3 +1,4 @@
+# Задача 22
 def find_common_elements(set1, set2):
     common_elements = sorted(list(set(set1) & set(set2)))
     return common_elements
@@ -19,3 +20,18 @@ for _ in range(m):
 result = find_common_elements(set1, set2)
 print("Числа, которые встречаются в обоих наборах без повторений в порядке возрастания:")
 print(result)
+
+# Задача 24
+n_bushes = int(input('Введите количество кустов черники: '))
+arr = list()
+
+for i in range(n_bushes):
+    a =int(input('Введите количество ягод на кусте: '))
+    arr.append(a)
+
+arr_count = list()
+
+for i in range(len(arr)):
+       arr_count.append(arr[i-2] + arr[i-1] + arr[i])
+
+print(max(arr_count))
